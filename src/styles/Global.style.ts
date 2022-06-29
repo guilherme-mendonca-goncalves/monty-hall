@@ -13,8 +13,9 @@ const GlobalStyle = createGlobalStyle`
       height: 100%;
     }
     body {
-      background-color: ${theme.colors.light};
+      background-color: ${theme.colors.dark};
       align-items: center;
+      color: ${theme.colors.white};
       display: flex;
       flex-direction: column;
       font-family: 'Roboto', sans-serif;

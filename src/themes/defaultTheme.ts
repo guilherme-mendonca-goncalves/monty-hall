@@ -19,6 +19,8 @@ const defaultTheme = {
     success: '#30B47A',
     warning: '#FFCF00',
     white: '#ffffff',
+    green1: '#7aa944',
+    green2: '#5c7e32'
   },
   font: {
     sizes: {
