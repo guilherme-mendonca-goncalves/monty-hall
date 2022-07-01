@@ -26,9 +26,16 @@ const GlobalStyle = createGlobalStyle`
     }
     #__next {
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     a {
       color: ${theme.colors.gray}
+    }
+
+    main {
+      display: flex;
     }
   `}
 `;

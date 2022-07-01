@@ -13,7 +13,7 @@ export const Lid = styled.div`
   ${({ theme }) => css`
     width: 100px;
     height: 25px;
-    background-color: ${theme.colors.green1};
+    background-color: ${theme.montyHall.colors.lid};
   `}
 `;
 
@@ -21,13 +21,13 @@ export const Box = styled.div`
   ${({ theme }) => css`
     width: 90px;
     height: 60px;
-    background-color: ${theme.colors.green2};
+    background-color: ${theme.montyHall.colors.box};
   `}
 `;
 
 export const Bow1 = styled.div`
   ${({ theme }) => css`
-    background-color: ${theme.colors.error};
+    background-color: ${theme.montyHall.colors.bow};
     width: 15px;
     height: 85px;
     position: absolute;
@@ -36,7 +36,7 @@ export const Bow1 = styled.div`
 
 export const Bow2 = styled.div`
   ${({ theme }) => css`
-    background-color: ${theme.colors.error};
+    background-color: ${theme.montyHall.colors.bow};
     width: 90px;
     height: 15px;
     position: absolute;

@@ -19,8 +19,6 @@ const defaultTheme = {
     success: '#30B47A',
     warning: '#FFCF00',
     white: '#ffffff',
-    green1: '#7aa944',
-    green2: '#5c7e32'
   },
   font: {
     sizes: {
@@ -41,6 +39,22 @@ const defaultTheme = {
     base: 0,
     modal: 10,
     awaysOnTop: 20,
+  },
+  montyHall: {
+    colors: {
+      lid: '#7aa944',
+      box: '#5c7e32',
+      bow: '#FC3C2B',
+      door: '#8b4513',
+      doorHandle: '#8b2000',
+      brown: '#a0522d',
+      whitesmoke: '#D3D3D3',
+      yellow: '#EBEB00'
+    },
+    sizes: {
+      widthDoor: '200px',
+      heightDoor: '310px',
+    }
   },
 } as const;
 

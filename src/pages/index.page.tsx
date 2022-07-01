@@ -1,4 +1,4 @@
-import { Present } from '@src/components';
+import { Door, Present } from '@src/components';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -11,7 +11,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <Present />
+        <Door selected={true}/>
+        <Door selected={false}/>
       </main>
 
       <footer>
