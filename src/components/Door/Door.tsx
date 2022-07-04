@@ -1,19 +1,41 @@
+import DoorModel from '@src/model/DoorModel';
 import * as Style from './Door.style';
 
-const Present = (props: any) => {
-  const isSelected = props.selected ? true : false;
+interface DoorProps {
+  value : DoorModel,
+  onChange: (newDoor: DoorModel) => void
+}
+
+const Door = (props: DoorProps) => {
+  const door = props.value;
+  const isSelected = door.selected ? true : false;
+
+  const toggleSelection = (e) => {
+    props.onChange(door.toggleSelection());
+  };
+
+  const openDoor = (e) => {
+    e.stopPropagation();
+    props.onChange(door.openDoor());
+  };
+
+  const renderDoor = () => {
+    return (
+      <Style.Door>
+        <Style.Number selected={isSelected}>{door.number}</Style.Number>
+        <Style.DoorHandle selected={isSelected} onClick={openDoor}></Style.DoorHandle>
+      </Style.Door>
+    );
+  };
 
   return (
-    <Style.Area>
+    <Style.Area onClick={toggleSelection}>
       <Style.Frame selected={isSelected}>
-        <Style.Door>
-          <Style.Number selected={isSelected}>3</Style.Number>
-          <Style.DoorHandle selected={isSelected}></Style.DoorHandle>
-        </Style.Door>
+        {door.open ? false : renderDoor()}
       </Style.Frame>
       <Style.Floor></Style.Floor>
     </Style.Area>
   );
 };
 
-export default Present;
+export default Door;

@@ -49,7 +49,8 @@ const defaultTheme = {
       doorHandle: '#8b2000',
       brown: '#a0522d',
       whitesmoke: '#D3D3D3',
-      yellow: '#EBEB00'
+      yellow: '#EBEB00',
+      backgroundDoor: '#0005'
     },
     sizes: {
       widthDoor: '200px',

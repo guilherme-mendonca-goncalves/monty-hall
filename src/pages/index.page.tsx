@@ -1,8 +1,12 @@
 import { Door, Present } from '@src/components';
+import DoorModel from '@src/model/DoorModel';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { useState } from 'react';
 
 const Home: NextPage = () => {
+  const [door1, setDoor1] = useState(new DoorModel(1));
+
   return (
     <>
       <Head>
@@ -11,8 +15,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <Door selected={true}/>
-        <Door selected={false}/>
+        <Door value={door1} onChange={newDoor => setDoor1(newDoor)}/>
       </main>
 
       <footer>

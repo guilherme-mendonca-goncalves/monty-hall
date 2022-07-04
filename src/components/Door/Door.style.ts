@@ -19,6 +19,7 @@ export const Frame = styled.div`
     border-left: 5px solid ${theme.montyHall.colors.brown};
     border-top: 5px solid ${theme.montyHall.colors.brown};
     border-right: 5px solid ${theme.montyHall.colors.brown};
+    background-color: ${theme.montyHall.colors.backgroundDoor};
     width: 90%;
 
     ${(props) => props.selected === true && css`
