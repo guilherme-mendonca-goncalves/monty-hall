@@ -24,6 +24,10 @@ class DoorModel {
     return this.#open;
   }
 
+  get close () {
+    return !this.open;
+  }
+
   unselected () {
     const isSelected = false;
     return new DoorModel (this.number, this.havePresent, isSelected, this.open);

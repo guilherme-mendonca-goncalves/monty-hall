@@ -16,6 +16,7 @@ export const Frame = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-grow: 1;
+    flex-direction: column-reverse;
     border-left: 5px solid ${theme.montyHall.colors.brown};
     border-top: 5px solid ${theme.montyHall.colors.brown};
     border-right: 5px solid ${theme.montyHall.colors.brown};

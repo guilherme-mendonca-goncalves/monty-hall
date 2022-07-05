@@ -1,4 +1,5 @@
 import DoorModel from '@src/model/DoorModel';
+import Present from '../Present';
 import * as Style from './Door.style';
 
 interface DoorProps {
@@ -31,7 +32,10 @@ const Door = (props: DoorProps) => {
   return (
     <Style.Area onClick={toggleSelection}>
       <Style.Frame selected={isSelected}>
-        {door.open ? false : renderDoor()}
+        {door.close ? renderDoor() :
+          door.havePresent ? <Present /> :
+          false
+        }
       </Style.Frame>
       <Style.Floor></Style.Floor>
     </Style.Area>
