@@ -15,6 +15,7 @@ const defaultTheme = {
     gray: '#dbdbdb',
     light: '#F2F4F7',
     primary: '#0230BA',
+    red: '#c0392c',
     secondary: '#c7c7c7',
     success: '#30B47A',
     warning: '#FFCF00',

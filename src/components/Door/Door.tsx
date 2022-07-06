@@ -11,11 +11,11 @@ const Door = (props: DoorProps) => {
   const door = props.value;
   const isSelected = door.selected ? true : false;
 
-  const toggleSelection = (e) => {
+  const toggleSelection = () => {
     props.onChange(door.toggleSelection());
   };
 
-  const openDoor = (e) => {
+  const openDoor = (e: any) => {
     e.stopPropagation();
     props.onChange(door.openDoor());
   };

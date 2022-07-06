@@ -1,18 +1,13 @@
-import { Door, Present } from '@src/components';
-import { createDoor, updateDoors } from '@src/functions/createDoor';
-import DoorModel from '@src/model/DoorModel';
+import { Card, NumberInput } from '@src/components';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 import { useState } from 'react';
 
 const Home: NextPage = () => {
-  const [doors, setDoors] = useState(createDoor(3,2));
-
-  const renderingDoor = () => {
-    return doors.map(door => {
-      return <Door key={door.number} value={door} onChange={newDoor => setDoors(updateDoors(doors, newDoor))}/>;
-    });
-  };
+  const [numberOfDoors, setnumberOfDoors] = useState(3);
+  let doorWithPresent = Math.floor(Math.random() * (numberOfDoors - 1 + 1)) + 1;
+  console.log(doorWithPresent);
 
   return (
     <>
@@ -22,7 +17,22 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        {renderingDoor()}
+        <div className='teste'>
+          <Card bgcolor='#c0392c'><h1>Monty Hall</h1></Card>
+          <Card>
+            <NumberInput
+              text='Quantidade de portas'
+              value={numberOfDoors}
+              onChange={newQuantity => setnumberOfDoors(newQuantity)}
+            />
+          </Card>
+        </div>
+        <div>
+          <Card>
+            <h3>Atrás de uma das portas existe um prêmio...{'\n'}Você consegue adivinhar?</h3>
+          </Card>
+          <Card bgcolor='#28a085'><Link href={`/game/${numberOfDoors}/${doorWithPresent}`} passHref><h2>Iniciar</h2></Link></Card>
+        </div>
       </main>
 
       <footer>
